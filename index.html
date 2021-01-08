@@ -1,0 +1,37 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <title>
+        Project on Arrays
+    </title>
+</head>
+
+<body>
+    <h1>
+        My Family Book
+    </h1>
+    <img src="family_cover_image.jfif" id="image">
+    <h5 id="name_of_family_member"> </h5>
+    <button type="button" onclick="next()"> Next </button>
+    <script>
+        var images = ["father.jpg", "mother.png", "grandfather.jfif", "grandmother.jpg",
+            "son.jfif"
+        ];
+        var names = ["Santosh Rangnekar", "Anagha Rangnekar", "Jayant Nadkarni", "Suhasini Nadkarni",
+            "Ishan Rangnekar"
+        ];
+        var nextmember = 0;
+
+        function next() {
+            if (nextmember == 5) {
+                nextmember = 0;
+            }
+            document.getElementById("image").src = images[nextmember];
+            document.getElementById("name_of_family_member").innerHTML = names[nextmember];
+            nextmember++;
+        }
+    </script>
+</body>
+
+</html>
